@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jL2-ZW-7Hx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Authentication VC-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController restorationIdentifier="Authentication" storyboardIdentifier="Authentication" title="Touch ID Demo" id="vXZ-lx-hvc" userLabel="Authentication VC" customClass="ViewController" customModule="TouchIDExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpw-aK-F4S">
+                                <rect key="frame" x="226" y="189" width="149" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0H9-nP-56Y"/>
+                                    <constraint firstAttribute="width" constant="149" id="JHO-Gw-8GS"/>
+                                </constraints>
+                                <state key="normal" title="Authenticate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginTouchIDAuthCheck" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6FL-AY-KfG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authentication Result:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Um-7r-pn3">
+                                <rect key="frame" x="186" y="273" width="229" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="KdL-hD-hID"/>
+                                    <constraint firstAttribute="width" constant="229" id="jJu-ef-Wbg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UZ-Tx-ur3">
+                                <rect key="frame" x="121" y="312" width="358" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="cZT-0m-i8Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vpw-aK-F4S" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="137-WX-WMR"/>
+                            <constraint firstItem="9Um-7r-pn3" firstAttribute="top" secondItem="Vpw-aK-F4S" secondAttribute="bottom" constant="54" id="Dgm-6j-MFw"/>
+                            <constraint firstItem="9Um-7r-pn3" firstAttribute="centerX" secondItem="Vpw-aK-F4S" secondAttribute="centerX" id="Jfa-C5-3Us"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7UZ-Tx-ur3" secondAttribute="bottom" constant="70" id="SaY-p8-CjO"/>
+                            <constraint firstItem="Vpw-aK-F4S" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="125" id="hKV-em-Sjh"/>
+                            <constraint firstItem="7UZ-Tx-ur3" firstAttribute="top" secondItem="9Um-7r-pn3" secondAttribute="bottom" constant="19" id="ysx-M0-TDb"/>
+                            <constraint firstItem="7UZ-Tx-ur3" firstAttribute="centerX" secondItem="9Um-7r-pn3" secondAttribute="centerX" id="zy8-pW-306"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Touch ID Demo" id="FSy-QK-lF3"/>
+                    <connections>
+                        <outlet property="lblAuthResult" destination="7UZ-Tx-ur3" id="Xqb-J4-Xkd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307" y="825"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pB6-bv-8el">
+            <objects>
+                <navigationController id="jL2-ZW-7Hx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="noz-G6-Shm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="23I-JS-tI2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ev6-Tc-kId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1030" y="825"/>
+        </scene>
+    </scenes>
+</document>
